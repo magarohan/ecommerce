@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce/themes/colors.dart';
 
@@ -137,6 +136,27 @@ class _HomeScreenState
             children: [
               Text(
                 "Top Selling",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              Text("View All"),
+            ],
+          ),
+          SizedBox(
+              height: 300,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  _buildProductCard('Jacket', 'Rs. 9999', 'https://images.pexels.com/photos/1124468/pexels-photo-1124468.jpeg?auto=compress&cs=tinysrgb&w=600'),
+                  _buildProductCard('T-shirt', 'Rs. 888', 'https://images.pexels.com/photos/991509/pexels-photo-991509.jpeg?auto=compress&cs=tinysrgb&w=600'),
+                  _buildProductCard('Pants', 'Rs. 4645', 'https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=600'),
+                  _buildProductCard('Shoes', 'Rs. 5645', 'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=600')
+                ],
+              )),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "New Arrivals",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               Text("View All"),
