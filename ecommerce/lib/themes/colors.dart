@@ -6,11 +6,9 @@ class MyColors {
       255,
       255,
       1.0);
-  static const Color backgroundColor2 = Color.fromRGBO(
-      192,
-      192,
-      192,
-      1.0);
+  static const Color
+      backgroundColor2 =
+      Color(0xFFF4F4F4);
 
   static const Color primaryColor = Color.fromRGBO(
       142,

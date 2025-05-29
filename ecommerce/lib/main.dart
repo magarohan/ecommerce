@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ecommerce/login.dart';
 import 'package:ecommerce/signup.dart';
+import 'package:ecommerce/home.dart';
 
 void
     main() {
@@ -22,6 +23,7 @@ class MainApp
       routes: {
         '/login': (context) => const LoginScreen(),
         '/signup': (context) => const SignupScreen(),
+        '/home': (context) => const HomeScreen(),
       },
     );
   }

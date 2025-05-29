@@ -23,6 +23,8 @@ class _LoginScreenState
   Future<void>
       onPressed() async {
     // TODO: Add authentication logic here
+    Navigator.pushNamed(context,
+        '/home');
     String
         email =
         _emailController.text.trim();
@@ -58,6 +60,7 @@ class _LoginScreenState
                   child: TextField(
                     controller: _emailController,
                     decoration: const InputDecoration(
+                      filled: true,
                       fillColor: MyColors.backgroundColor2,
                       labelText: 'Email',
                       border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(4))),
@@ -70,6 +73,7 @@ class _LoginScreenState
                   child: TextField(
                     controller: _passwordController,
                     decoration: const InputDecoration(
+                      filled: true,
                       fillColor: MyColors.backgroundColor2,
                       labelText: 'Password',
                       border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(4))),

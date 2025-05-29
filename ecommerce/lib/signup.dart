@@ -71,6 +71,8 @@ class _SignupScreenState
                   child: TextField(
                     controller: _emailController,
                     decoration: const InputDecoration(
+                      filled: true,
+                      fillColor: MyColors.backgroundColor2,
                       labelText: 'Email',
                       border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(4))),
                     ),
@@ -82,6 +84,8 @@ class _SignupScreenState
                   child: TextField(
                     controller: _passwordController,
                     decoration: const InputDecoration(
+                      filled: true,
+                      fillColor: MyColors.backgroundColor2,
                       labelText: 'Password',
                       border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(4))),
                     ),
