@@ -2,8 +2,14 @@ import 'package:flutter/material.dart';
 
 class CategoryScreen
     extends StatefulWidget {
+  final String?
+      label;
+  final String?
+      imageUrl;
   const CategoryScreen(
-      {super.key});
+      {super.key,
+      this.label,
+      this.imageUrl});
 
   @override
   State<CategoryScreen> createState() =>
@@ -17,7 +23,7 @@ class _CategoryState
       build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Hoodies"),
+        title: Text(widget.label!),
       ),
       body: GridView.count(
         crossAxisCount: 3,
@@ -25,12 +31,12 @@ class _CategoryState
         mainAxisSpacing: 5,
         childAspectRatio: 0.6,
         children: <Widget>[
-          _buildProductCard("Hoodie 1", "1000", "https://images.pexels.com/photos/2046790/pexels-photo-2046790.jpeg?auto=compress&cs=tinysrgb&w=600"),
-          _buildProductCard("Hoodie 2", "1000", "https://images.pexels.com/photos/2046790/pexels-photo-2046790.jpeg?auto=compress&cs=tinysrgb&w=600"),
-          _buildProductCard("Hoodie 3", "1000", "https://images.pexels.com/photos/2046790/pexels-photo-2046790.jpeg?auto=compress&cs=tinysrgb&w=600"),
-          _buildProductCard("Hoodie 4", "1000", "https://images.pexels.com/photos/2046790/pexels-photo-2046790.jpeg?auto=compress&cs=tinysrgb&w=600"),
-          _buildProductCard("Hoodie 5", "1000", "https://images.pexels.com/photos/2046790/pexels-photo-2046790.jpeg?auto=compress&cs=tinysrgb&w=600"),
-          _buildProductCard("Hoodie 6", "1000", "https://images.pexels.com/photos/2046790/pexels-photo-2046790.jpeg?auto=compress&cs=tinysrgb&w=600")
+          _buildProductCard("${widget.label} 1", "1000", "${widget.imageUrl}"),
+          _buildProductCard("${widget.label} 2", "1000", "${widget.imageUrl}"),
+          _buildProductCard("${widget.label} 3", "1000", "${widget.imageUrl}"),
+          _buildProductCard("${widget.label} 4", "1000", "${widget.imageUrl}"),
+          _buildProductCard("${widget.label} 5", "1000", "${widget.imageUrl}"),
+          _buildProductCard("${widget.label} 6", "1000", "${widget.imageUrl}")
         ],
       ),
     );

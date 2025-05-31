@@ -1,3 +1,5 @@
+import 'package:ecommerce/category.dart';
+import 'package:ecommerce/product.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce/themes/colors.dart';
 
@@ -128,35 +130,65 @@ class _HomeScreenState
                 'Hoodies',
                 'https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=600',
                 () {
-                  Navigator.pushNamed(context, '/category');
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => (const CategoryScreen(
+                                label: "Hoodies",
+                                imageUrl: 'https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=600',
+                              ))));
                 },
               ),
               _buildCategory(
                 'Shorts',
                 'https://images.pexels.com/photos/32222838/pexels-photo-32222838/free-photo-of-man-posing-at-liberty-square-arch-in-taipei.jpeg?auto=compress&cs=tinysrgb&w=600',
                 () {
-                  Navigator.pushNamed(context, '/category');
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => (const CategoryScreen(
+                                label: "Shorts",
+                                imageUrl: 'https://images.pexels.com/photos/32222838/pexels-photo-32222838/free-photo-of-man-posing-at-liberty-square-arch-in-taipei.jpeg?auto=compress&cs=tinysrgb&w=600',
+                              ))));
                 },
               ),
               _buildCategory(
                 'Shoes',
                 'https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600',
                 () {
-                  Navigator.pushNamed(context, '/category');
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => (const CategoryScreen(
+                                label: "Shoes",
+                                imageUrl: 'https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600',
+                              ))));
                 },
               ),
               _buildCategory(
                 'Bags',
                 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600',
                 () {
-                  Navigator.pushNamed(context, '/category');
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => (const CategoryScreen(
+                                label: "Bags",
+                                imageUrl: 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600',
+                              ))));
                 },
               ),
               _buildCategory(
                 'Accessories',
                 'https://images.pexels.com/photos/343720/pexels-photo-343720.jpeg?auto=compress&cs=tinysrgb&w=600',
                 () {
-                  Navigator.pushNamed(context, '/category');
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => (const CategoryScreen(
+                                label: "Accessories",
+                                imageUrl: 'https://images.pexels.com/photos/343720/pexels-photo-343720.jpeg?auto=compress&cs=tinysrgb&w=600',
+                              ))));
                 },
               ),
             ],
@@ -176,10 +208,46 @@ class _HomeScreenState
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  _buildProductCard('Jacket', 'Rs. 9999', 'https://images.pexels.com/photos/1124468/pexels-photo-1124468.jpeg?auto=compress&cs=tinysrgb&w=600'),
-                  _buildProductCard('T-shirt', 'Rs. 888', 'https://images.pexels.com/photos/991509/pexels-photo-991509.jpeg?auto=compress&cs=tinysrgb&w=600'),
-                  _buildProductCard('Pants', 'Rs. 4645', 'https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=600'),
-                  _buildProductCard('Shoes', 'Rs. 5645', 'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=600')
+                  _buildProductCard('Jacket', 'Rs. 9999', 'https://images.pexels.com/photos/1124468/pexels-photo-1124468.jpeg?auto=compress&cs=tinysrgb&w=600', () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => (const ProductScreen(
+                                  label: 'Jacket',
+                                  price: 'Rs. 9999',
+                                  imageUrl: 'https://images.pexels.com/photos/1124468/pexels-photo-1124468.jpeg?auto=compress&cs=tinysrgb&w=600',
+                                ))));
+                  }),
+                  _buildProductCard('T-shirt', 'Rs. 888', 'https://images.pexels.com/photos/991509/pexels-photo-991509.jpeg?auto=compress&cs=tinysrgb&w=600', () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => (const ProductScreen(
+                                  label: 'T-shirt',
+                                  price: 'Rs. 888',
+                                  imageUrl: 'https://images.pexels.com/photos/991509/pexels-photo-991509.jpeg?auto=compress&cs=tinysrgb&w=600',
+                                ))));
+                  }),
+                  _buildProductCard('Pants', 'Rs. 4645', 'https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=600', () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => (const ProductScreen(
+                                  label: 'Pants',
+                                  price: 'Rs. 4645',
+                                  imageUrl: 'https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=600',
+                                ))));
+                  }),
+                  _buildProductCard('Shoes', 'Rs. 5645', 'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=600', () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => (const ProductScreen(
+                                  label: 'Shoes',
+                                  price: 'Rs. 5645',
+                                  imageUrl: 'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=600',
+                                ))));
+                  })
                 ],
               )),
           const Row(
@@ -197,10 +265,46 @@ class _HomeScreenState
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  _buildProductCard('Jacket', 'Rs. 9999', 'https://images.pexels.com/photos/1124468/pexels-photo-1124468.jpeg?auto=compress&cs=tinysrgb&w=600'),
-                  _buildProductCard('T-shirt', 'Rs. 888', 'https://images.pexels.com/photos/991509/pexels-photo-991509.jpeg?auto=compress&cs=tinysrgb&w=600'),
-                  _buildProductCard('Pants', 'Rs. 4645', 'https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=600'),
-                  _buildProductCard('Shoes', 'Rs. 5645', 'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=600')
+                  _buildProductCard('Jacket', 'Rs. 9999', 'https://images.pexels.com/photos/1124468/pexels-photo-1124468.jpeg?auto=compress&cs=tinysrgb&w=600', () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => (const ProductScreen(
+                                  label: 'Jacket',
+                                  price: 'Rs. 9999',
+                                  imageUrl: 'https://images.pexels.com/photos/1124468/pexels-photo-1124468.jpeg?auto=compress&cs=tinysrgb&w=600',
+                                ))));
+                  }),
+                  _buildProductCard('T-shirt', 'Rs. 888', 'https://images.pexels.com/photos/991509/pexels-photo-991509.jpeg?auto=compress&cs=tinysrgb&w=600', () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => (const ProductScreen(
+                                  label: 'T-shirt',
+                                  price: 'Rs. 888',
+                                  imageUrl: 'https://images.pexels.com/photos/991509/pexels-photo-991509.jpeg?auto=compress&cs=tinysrgb&w=600',
+                                ))));
+                  }),
+                  _buildProductCard('Pants', 'Rs. 4645', 'https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=600', () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => (const ProductScreen(
+                                  label: 'Pants',
+                                  price: 'Rs. 4645',
+                                  imageUrl: 'https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=600',
+                                ))));
+                  }),
+                  _buildProductCard('Shoes', 'Rs. 5645', 'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=600', () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => (const ProductScreen(
+                                  label: 'Shoes',
+                                  price: 'Rs. 5645',
+                                  imageUrl: 'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=600',
+                                ))));
+                  })
                 ],
               ))
         ],
@@ -229,9 +333,10 @@ class _HomeScreenState
   Widget _buildProductCard(
       String label,
       String price,
-      String imageUrl) {
-    return Padding(
-        padding: const EdgeInsets.all(8.0),
+      String imageUrl,
+      VoidCallback onTap) {
+    return GestureDetector(
+        onTap: onTap,
         child: Column(children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(10),
