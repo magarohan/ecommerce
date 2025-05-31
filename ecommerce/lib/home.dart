@@ -124,11 +124,41 @@ class _HomeScreenState
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              _buildCategory('Hoodies', 'https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=600'),
-              _buildCategory('Shorts', 'https://images.pexels.com/photos/32222838/pexels-photo-32222838/free-photo-of-man-posing-at-liberty-square-arch-in-taipei.jpeg?auto=compress&cs=tinysrgb&w=600'),
-              _buildCategory('Shoes', 'https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600'),
-              _buildCategory('Bags', 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600'),
-              _buildCategory('Accessories', 'https://images.pexels.com/photos/343720/pexels-photo-343720.jpeg?auto=compress&cs=tinysrgb&w=600'),
+              _buildCategory(
+                'Hoodies',
+                'https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=600',
+                () {
+                  Navigator.pushNamed(context, '/category');
+                },
+              ),
+              _buildCategory(
+                'Shorts',
+                'https://images.pexels.com/photos/32222838/pexels-photo-32222838/free-photo-of-man-posing-at-liberty-square-arch-in-taipei.jpeg?auto=compress&cs=tinysrgb&w=600',
+                () {
+                  Navigator.pushNamed(context, '/category');
+                },
+              ),
+              _buildCategory(
+                'Shoes',
+                'https://images.pexels.com/photos/19090/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600',
+                () {
+                  Navigator.pushNamed(context, '/category');
+                },
+              ),
+              _buildCategory(
+                'Bags',
+                'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600',
+                () {
+                  Navigator.pushNamed(context, '/category');
+                },
+              ),
+              _buildCategory(
+                'Accessories',
+                'https://images.pexels.com/photos/343720/pexels-photo-343720.jpeg?auto=compress&cs=tinysrgb&w=600',
+                () {
+                  Navigator.pushNamed(context, '/category');
+                },
+              ),
             ],
           ),
           const Row(
@@ -180,15 +210,19 @@ class _HomeScreenState
 
   Widget _buildCategory(
       String label,
-      String imageUrl) {
-    return Column(
-      children: [
-        CircleAvatar(
-          radius: 20,
-          backgroundImage: NetworkImage(imageUrl),
-        ),
-        Text(label)
-      ],
+      String imageUrl,
+      VoidCallback onTap) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Column(
+        children: [
+          CircleAvatar(
+            radius: 20,
+            backgroundImage: NetworkImage(imageUrl),
+          ),
+          Text(label)
+        ],
+      ),
     );
   }
 
