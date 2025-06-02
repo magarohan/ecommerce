@@ -40,11 +40,16 @@ class _HomeScreenState
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     // Avatar
-                    const CircleAvatar(
-                      radius: 20,
-                      backgroundImage: NetworkImage(
-                        'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg',
+                    IconButton(
+                      icon: const CircleAvatar(
+                        radius: 20,
+                        backgroundImage: NetworkImage(
+                          'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg',
+                        ),
                       ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/profile');
+                      },
                     ),
                     // Dropdown
                     Container(

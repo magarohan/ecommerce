@@ -1,6 +1,5 @@
 import 'package:ecommerce/themes/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ProductScreen
     extends StatefulWidget {

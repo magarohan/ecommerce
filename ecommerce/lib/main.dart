@@ -1,3 +1,4 @@
+import 'package:ecommerce/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce/login.dart';
 import 'package:ecommerce/signup.dart';
@@ -26,6 +27,7 @@ class MainApp
         '/signup': (context) => const SignupScreen(),
         '/home': (context) => const HomeScreen(),
         '/category': (context) => const CategoryScreen(),
+        '/profile': (context) => const ProfileScreen(),
       },
     );
   }
