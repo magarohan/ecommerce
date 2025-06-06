@@ -87,7 +87,9 @@ class _HomeScreenState
                       ),
                       child: IconButton(
                         icon: const Icon(Icons.shopping_bag_outlined, color: Colors.white),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/cart');
+                        },
                       ),
                     ),
                   ],

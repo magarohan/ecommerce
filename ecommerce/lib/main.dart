@@ -1,3 +1,4 @@
+import 'package:ecommerce/cart.dart';
 import 'package:ecommerce/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce/login.dart';
@@ -28,6 +29,7 @@ class MainApp
         '/home': (context) => const HomeScreen(),
         '/category': (context) => const CategoryScreen(),
         '/profile': (context) => const ProfileScreen(),
+        '/cart': (context) => const CartScreen(),
       },
     );
   }
