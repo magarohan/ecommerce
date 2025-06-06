@@ -1,3 +1,4 @@
+import 'package:ecommerce/checkout.dart';
 import 'package:ecommerce/themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -103,7 +104,9 @@ class _CartScreenState
           SizedBox(
             width: double.infinity,
             child: TextButton(
-              onPressed: () => {},
+              onPressed: () => {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const CheckoutScreen()))
+              },
               style: TextButton.styleFrom(
                 backgroundColor: MyColors.primaryColor,
               ),
